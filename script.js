@@ -30,7 +30,7 @@ const app = new Vue({
             },
             {
                 text: "Fare i Milestone",
-                done: false,
+                done: true,
             },
             {
                 text: "Fare i bonus",
@@ -40,12 +40,6 @@ const app = new Vue({
 
         nuovoText: '',
     },
-
-
-    // nuovoToDo: {
-    //     text: '',
-    //     done: false,
-    // },
 
     methods:{
         isDone(el){
@@ -70,5 +64,3 @@ const app = new Vue({
     },
 
 })
-
-// v-for="(el, i) in toDoArray"
