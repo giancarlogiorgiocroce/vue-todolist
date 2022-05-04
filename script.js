@@ -19,11 +19,30 @@ Predisporre un campo di input testuale e un pulsante “aggiungi”: cliccando s
 */
 
 const app = new Vue({
-    el: '#app',
-    data:{
 
+    el: '#app',
+
+    data:{
+        toDoArray: [
+            {
+                text: "Preparare la base",
+                done: false,
+            },
+            {
+                text: "Fare i Milestone",
+                done: false,
+            },
+            {
+                text: "Fare i bonus",
+                done: false,
+            },
+        ]
     },
+
     methods:{
 
     },
+
 })
+
+// v-for="(el, i) in toDoArray"

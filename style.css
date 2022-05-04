@@ -1,0 +1,61 @@
+/*
+    GENERAL
+*/
+body{
+    background-color: teal;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/*
+    /GENERAL
+*/
+
+
+/*
+    HEADER
+*/
+header{
+    background-color: orange;
+    color: white;
+}
+header h1{
+    font-style: italic;
+}
+.my-col{
+    height: 50px;
+}
+.my-btn,
+input,
+input::placeholder{
+    background-color: teal;
+    color: white;
+}
+.my-btn{
+    border: 2px solid black;
+    border-radius: 50px;
+}
+/*
+    /HEADER
+*/
+
+
+/*
+    MAIN
+*/
+main{
+    color: white;
+}
+.todo-box{
+    cursor: pointer;
+    background-color: orange;
+}
+.todo-txt{
+    height: 50px;
+    line-height: 50px;
+    text-transform: capitalize;
+}
+main i.fa-xmark{
+    line-height: 50px;
+}
+/*
+    /MAIN
+*/
