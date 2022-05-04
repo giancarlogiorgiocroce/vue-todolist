@@ -21,16 +21,20 @@
                 <h1>Lista delle cose da fare</h1>
             </div>
             <div class="col my-col my-2 d-flex justify-content-center"
-            @keyup.enter="aggiungiToDo">
+            @keyup.enter="aggiungiToDo()">
 
-                <input v-model="nuovoText" placeholder="Cose da fare">
+                <input v-model.trim="nuovoText" placeholder="Cose da fare">
 
                 <button class="btn my-btn mx-3"
                     @click="aggiungiToDo()"
                 >
                     Aggiungi alla lista
                 </button>
+                <i class="fa-solid fa-dumpster-fire mx-3"
+                    @click="deleteInFire"
+                ></i>
             </div>
+
         </header>
 
         <main
@@ -48,10 +52,16 @@
 
             <i
                 class="fa-solid fa-xmark col-1"
-                @click="eliminaToDo(el)"
+                @click="eliminaToDo()"
             ></i>
 
         </main>
+
+        <div class="row text-center"
+            v-if="toDoArray.length === 0"
+        >
+            <h1 :class="fireOn === true ? 'red' : ''">Wow, che stakanovista!</h1>
+        </div>
 
     </div>
 

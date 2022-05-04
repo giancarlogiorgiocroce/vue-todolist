@@ -6,6 +6,11 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
 }
+.red{
+    color: red;
+    font-size: 100px;
+    box-shadow: 3px 3px red, -1em 0 .4em red;
+}
 /*
     /GENERAL
 */
@@ -35,6 +40,14 @@ input::placeholder{
 .my-btn{
     border: 2px solid black;
     border-radius: 50px;
+}
+.fa-dumpster-fire{
+    line-height: 50px;
+    font-size: larger;
+}
+.fa-dumpster-fire:hover{
+    color: teal;
+    cursor: pointer;
 }
 /*
     /HEADER

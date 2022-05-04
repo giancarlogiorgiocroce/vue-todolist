@@ -34,11 +34,16 @@ const app = new Vue({
             },
             {
                 text: "Fare i bonus",
+                done: true,
+            },
+            {
+                text: "Inventare altri bonus?",
                 done: false,
             },
         ],
 
         nuovoText: '',
+        fireOn: false,
     },
 
     methods:{
@@ -49,9 +54,8 @@ const app = new Vue({
                 el.done = false;
             }
         },
-        eliminaToDo(el){
-            console.log(el);
-            this.toDoArray.splice("el", 1)
+        eliminaToDo(){
+            this.toDoArray.splice("el", 1);
         },
         aggiungiToDo(){
             let nuovoOggetto = {
@@ -59,7 +63,10 @@ const app = new Vue({
                 done: false,
             }
             this.toDoArray.push(nuovoOggetto);
-            console.log(this.toDoArray);
+        },
+        deleteInFire(){
+            this.toDoArray.splice("el");
+            this.fireOn = true;
         }
     },
 
