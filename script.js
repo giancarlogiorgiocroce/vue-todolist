@@ -46,6 +46,10 @@ const app = new Vue({
             }else{
                 el.done = false;
             }
+        },
+        eliminaToDo(el){
+            console.log(el);
+            this.toDoArray.splice("el", 1)
         }
     },
 

@@ -30,18 +30,20 @@
             class="row my-5 justify-content-center"
             v-for="(el, i) in toDoArray"
         >
-            <div
-                class="col-7 my-1 todo-box d-flex justify-content-between"
+
+            <div 
+                class="todo-txt col-6"
+                :class="el.done === true ? 'line-through' : ''"
                 @click="isDone(el)"
             >
-                <div 
-                    class="todo-txt"
-                    :class="el.done === true ? 'line-through' : ''"
-                >
-                    {{el.text}}
-                </div>
-                <i class="fa-solid fa-xmark"></i>
+                {{el.text}}
             </div>
+            
+            <i
+                class="fa-solid fa-xmark col-1"
+                @click="eliminaToDo(el)"
+            ></i>
+
         </main>
 
     </div>

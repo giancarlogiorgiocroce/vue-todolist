@@ -4,6 +4,7 @@
 body{
     background-color: teal;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
 }
 /*
     /GENERAL
@@ -15,7 +16,6 @@ body{
 */
 header{
     background-color: orange;
-    color: white;
 }
 header h1{
     font-style: italic;
@@ -24,9 +24,12 @@ header h1{
     height: 50px;
 }
 .my-btn,
-input,
-input::placeholder{
+input{
     background-color: teal;
+    color: white;
+    border: 2px solid black;
+}
+input::placeholder{
     color: white;
 }
 .my-btn{
@@ -41,22 +44,14 @@ input::placeholder{
 /*
     MAIN
 */
-main{
-    color: white;
-}
-.todo-box{
-    cursor: pointer;
-    background-color: orange;
-}
-.todo-txt{
-    height: 50px;
+.todo-txt,
+i.fa-xmark{
     line-height: 50px;
+    background-color: orange;
+    cursor: pointer;
 }
 .line-through{
     text-decoration: line-through;
-}
-main i.fa-xmark{
-    line-height: 50px;
 }
 /*
     /MAIN
