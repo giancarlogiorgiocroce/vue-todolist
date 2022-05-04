@@ -36,8 +36,16 @@ const app = new Vue({
                 text: "Fare i bonus",
                 done: false,
             },
-        ]
+        ],
+
+        nuovoText: '',
     },
+
+
+    // nuovoToDo: {
+    //     text: '',
+    //     done: false,
+    // },
 
     methods:{
         isDone(el){
@@ -50,6 +58,14 @@ const app = new Vue({
         eliminaToDo(el){
             console.log(el);
             this.toDoArray.splice("el", 1)
+        },
+        aggiungiToDo(){
+            let nuovoOggetto = {
+                text: this.nuovoText,
+                done: false,
+            }
+            this.toDoArray.push(nuovoOggetto);
+            console.log(this.toDoArray);
         }
     },
 

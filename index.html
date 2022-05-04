@@ -21,8 +21,14 @@
                 <h1>Lista delle cose da fare</h1>
             </div>
             <div class="col my-col my-2 d-flex justify-content-center">
-                <input type="text" placeholder="Cose da fare">
-                <button class="btn my-btn mx-3">Aggiungi alla lista</button>
+
+                <input v-model="nuovoText" placeholder="Cose da fare">
+
+                <button class="btn my-btn mx-3"
+                    @click="aggiungiToDo(nuovoText)"
+                >
+                    Aggiungi alla lista
+                </button>
             </div>
         </header>
 
@@ -38,7 +44,7 @@
             >
                 {{el.text}}
             </div>
-            
+
             <i
                 class="fa-solid fa-xmark col-1"
                 @click="eliminaToDo(el)"
