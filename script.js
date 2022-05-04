@@ -26,7 +26,7 @@ const app = new Vue({
         toDoArray: [
             {
                 text: "Preparare la base",
-                done: false,
+                done: true,
             },
             {
                 text: "Fare i Milestone",
@@ -40,7 +40,13 @@ const app = new Vue({
     },
 
     methods:{
-
+        isDone(el){
+            if(el.done === false){
+                el.done = true;
+            }else{
+                el.done = false;
+            }
+        }
     },
 
 })

@@ -26,9 +26,20 @@
             </div>
         </header>
 
-        <main class="row my-5 justify-content-center">
-            <div class="col-7 my-1 todo-box d-flex justify-content-between">
-                <div class="todo-txt">ciao</div>
+        <main
+            class="row my-5 justify-content-center"
+            v-for="(el, i) in toDoArray"
+        >
+            <div
+                class="col-7 my-1 todo-box d-flex justify-content-between"
+                @click="isDone(el)"
+            >
+                <div 
+                    class="todo-txt"
+                    :class="el.done === true ? 'line-through' : ''"
+                >
+                    {{el.text}}
+                </div>
                 <i class="fa-solid fa-xmark"></i>
             </div>
         </main>

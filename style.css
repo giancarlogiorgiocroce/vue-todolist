@@ -51,7 +51,9 @@ main{
 .todo-txt{
     height: 50px;
     line-height: 50px;
-    text-transform: capitalize;
+}
+.line-through{
+    text-decoration: line-through;
 }
 main i.fa-xmark{
     line-height: 50px;
