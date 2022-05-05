@@ -63,10 +63,11 @@ const app = new Vue({
                 done: false,
             }
             this.toDoArray.push(nuovoOggetto);
+            this.nuovoText = "";
         },
         deleteInFire(){
-            this.toDoArray.splice("el");
-            this.fireOn = true;
+            this.toDoArray.splice('');
+            this.fireOn = !this.fireOn;
         }
     },
 
