@@ -54,8 +54,8 @@ const app = new Vue({
                 el.done = false;
             }
         },
-        eliminaToDo(){
-            this.toDoArray.splice("el", 1);
+        eliminaToDo(i){
+            this.toDoArray.splice(i, 1);
         },
         aggiungiToDo(){
             let nuovoOggetto = {
